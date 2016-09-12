@@ -1,0 +1,12 @@
+<div class='main-container'>
+  <div class='date-picker-container' (clickOutside)='closeDatePicker(0, $event)'>
+    <input readonly (focus)='showDatePicker(0)' type='input' [(ngModel)]="startDateFormated" />
+    <datepicker *ngIf='datePickerVisibility[0]' class='date-picker' [maxDate]="maxDate"
+     [(ngModel)]="startDate" [showWeeks]="true"  (ngModelChange)='dateSelect(0)' ></datepicker>
+  </div>
+  <div class='date-picker-container' (clickOutside)='closeDatePicker(1, $event)'>
+    <input readonly (focus)='showDatePicker(1)' type='input' [(ngModel)]="endDateFormated" />
+    <datepicker *ngIf='datePickerVisibility[1]' class='date-picker' [maxDate]="maxDate"
+    [(ngModel)]="endDate" [showWeeks]="true" (ngModelChange)='dateSelect(1)' ></datepicker>  </div>
+
+</div>

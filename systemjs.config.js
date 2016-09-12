@@ -26,6 +26,9 @@
       // other libraries
       'rxjs':                       'npm:rxjs',
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
+      'ng2-bootstrap':              'node_modules/ng2-bootstrap',
+      'moment': 'node_modules/moment',
+      'ng2-click-outside': 'node_modules/ng2-click-outside/lib'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -39,7 +42,10 @@
       'angular2-in-memory-web-api': {
         main: './index.js',
         defaultExtension: 'js'
-      }
+      },
+      'node_modules/ng2-bootstrap': {defaultExtension: 'js'},
+      'moment': { main: 'moment.js', defaultExtension: 'js' },
+      'ng2-click-outside': {main: 'index.js', defaultExtension: 'js'}
     }
   });
 })(this);
